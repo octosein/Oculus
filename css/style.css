@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'Helvetica', sans-serif;
+    src: url(../fonts/helvetica.woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url(../fonts/Helvetica-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+li{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color:#5c5c5e;
+}
+.container{
+    max-width: 1220px;
+    padding: 0 10 px;
+    margin: 0 auto;
+}
+.section-title{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.header{
+    border-bottom: 1px solid #CACAD6;
+}
+.nav{
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.menu{
+    display: flex;
+    gap: 0 20px;
+}
+.logo{
+    justify-self: center;
+}
+.cart{
+    position: relative;
+    justify-self: end;
+}
+.cart--on span{
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    line-height: 0;
+    position: absolute;
+    bottom: 0;
+    right: -2px;
+    
+}
+.top{
+min-height: calc(100vh - 81px);    
+background-image: url(../img/main-top-background.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: bottom center;
+}
+.title{
+    padding-top: 16%;
+    font-size: 96px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.subtitle{
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.top__text{
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+.buy-text{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.buy-btn{
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    display: flex;
+    padding: 1px;
+    text-transform: uppercase;
+
+}
+.buy-btn__price{
+    color: #F6F4F5;
+    padding: 20px 110px;
+}
+.buy-btn__text{
+    background-color: #e7e5e6;
+    padding: 20px 105px;
+    text-transform: uppercase;
+}
+.features{
+    padding: 100px 0;
+}
+.features__titles{
+    display: flex;
+}
+.features__title{
+    flex-basis: 300px;
+    padding-right: 20px;
+}
+.features__text{
+    max-width: 330px;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 2px;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.tabs{
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+.tabs__content{
+    position: relative;
+    min-height: 300px;
+}
+.tabs__btn-item{
+    font-family: 'Helvetica-Bold';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 0 0;
+    gap: 20px;
+    font-weight: 700;
+}
+.tabs__btn-item--active{
+    color: #070707;
+}
+.tabs__content-item{
+    display: grid;
+    grid-template-columns: auto 280px;
+    grid-template-rows: auto 150px;
+    gap:40px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1.3s ease ;
+}
+.tabs__content-item--active{
+    opacity: 1;
+}
+.tabs__content-img{
+    grid-row: 1/-1;
+}
+.tabs__content-box h3{
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.video{
+    grid-column: 2/3;
+    width: 280px;
+    height: 150px;
+    background-image: url(../img/features-video.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 9px 10px;
+}
+.video__btn{
+    margin-left: 22px;
+
+}
+.video span{
+    font-size: 13px;
+    color: #F6F4F5;
+
+}
+.games{
+    margin-bottom: 100px;
+}
+.games__title{
+    margin-bottom: 50px;
+}
+.games__inner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.games__descr{
+    padding-right: 10px;
+}
+.games__descr-title{
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.games__descr-text{
+    margin-bottom: 24px;
+}
+.games__link{
+    display: inline-block;
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border: 1px solid #BC10D8;
+    font-family: 'Helvetica-Bold'
+}
+.games__item{
+    border: 1px solid #BC10D8;
+    padding: 10px 20px 18px;
+    display: flex;
+    flex-direction: column;
+}
+.games__item-img{
+    margin-bottom: 10px;
+}
+.games__item-title{
+   font-size: 24px;
+   margin-bottom: 10px;
+   line-height: 28px;
+   font-style: normal;
+   color: #070707;
+}
+.games__item-text{
+    margin-bottom: 30px;
+}
+.games__item-link{
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: auto;
+
+}
+.buy{
+    margin-bottom: 110px;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+
+}
+.buy__img{
+    margin-bottom: 30px;
+}
+.buy .buy-btn{
+    margin: 0 auto;
+}
+.buy__bg{
+    position: absolute;   
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 400px;
+    line-height: 400px;
+    opacity: 0.3;
+    z-index: -1;
+    animation: line-text 6s linear 1s infinite;
+    background-clip: text;
+}
+@keyframes line-text{
+    from {
+        transform: translateX(115%);
+        transform-origin: left center;
+    }
+    to{
+        transform: translateX(-115%);
+        transform-origin: right center;
+    }
+}
